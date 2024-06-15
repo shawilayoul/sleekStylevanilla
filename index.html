@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SleekStyle</title>
+  </head>
+  <body class="">
+    <header
+      class="bg-headerBg relative text-mainWhite h-14 flex justify-center"
+    >
+      <nav
+        class="bg-headerBg fixed z-50 flex justify-between items-center pr-10 pl-10 w-full h-14"
+      >
+        <div class="">
+          <h2 class="text-[25px] font-bold">SleekStyle</h2>
+        </div>
+        <div class="hidden w-full tablet:block tablet:w-auto" id="navbar-default">
+        <ul class="desktop:flex gap-12 mobile:hidden">
+          <li><a href="./index.html"> Home</a></li>
+          <li><a href="./shop.html"> Shop</a></li>
+          <li><a href="./blog.html"> Blog</a></li>
+          <li><a href="./about.html"> About</a></li>
+          <li><a href="./contact.html"> Contact</a></li>
+        </ul>
+      </div>
+        <div
+          class="model desktop:hidden tablet:hidden mobile:hidden gap-12 flex bg-headerBg absolute top-[42px] w-[50%] h-[50vh] right-0 mt-3 p-2"
+        >
+          <ul class="flex flex-col items-center gap-8 text-[16px]">
+            <li><a href="./index.html"> Home</a></li>
+            <li><a href="./shop.html"> Shop</a></li>
+            <li><a href="./blog.html"> Blog</a></li>
+            <li><a href="./about.html"> About</a></li>
+            <li><a href="./contact.html"> Contact</a></li>
+          </ul>
+        </div>
+        <div class="desktop:flex gap-12 mobile:hidden">
+          <div class="bg-mainWhite rounded p-1">
+            <i class="fa fa-search text-mainBlack" aria-hidden="true"></i>
+            <input type="text" placeholder="search....." />
+          </div>
+          <div class="user"><i class="fa fa-user" aria-hidden="true"></i></div>
+          <div class="cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </div>
+        </div>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="btnmodel desktop:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header> 
+
+    <main>
+      <!-- Slideshow container -->
+      <div class="bg-homeBg p-2 relative w-[95%] m-auto mt-3 mb-4">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade w-full h-[70vh]">
+          <div
+            class="slide h-full , desktop:flex justify-between items-center , mobile:flex"
+          >
+            <img
+              src="images/t-shirt1.png"
+              class="h-96 desktop:w-96 , mobile:w-52"
+            />
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h2
+                class="slideTitle font-bold tablet:text-3xl , mobile:text-1xl"
+              >
+                The hidden gems <br />
+                in fashion trends
+              </h2>
+              <p class="">
+                Step into the realm of unparalleled style with our
+                unbeatablet-shirt trendsetter of today.
+              </p>
+              <div className="flex gap-32">
+                <button
+                  class="bg-mainBlack text-mainWhite p-2 rounded w-32 mr-4 cursor-pointer"
+                >
+                  Shop now
+                </button>
+              </div>
+            </div>
+            <img
+              src="images/t-shirt1.png"
+              class="imgLeft w-96 h-96 , desktop:flex , mobile:hidden"
+            />
+          </div>
+        </div>
+        <div class="mySlides fade w-full h-[70vh]">
+          <div
+            class="slide h-full , desktop:flex justify-between items-center , mobile:flex"
+          >
+            <img
+              src="images/t-shirt2.png"
+              class="h-96 desktop:w-96 , mobile:w-52"
+            />
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h2
+                class="slideTitle font-bold tablet:text-3xl , mobile:text-1xl"
+              >
+                The hidden gems <br />
+                in fashion trends
+              </h2>
+              <p class="">
+                Step into the realm of unparalleled style with our
+                unbeatablet-shirt trendsetter of today.
+              </p>
+              <div className="flex gap-32">
+                <button
+                  class="bg-mainBlack text-mainWhite p-2 rounded w-32 mr-4 cursor-pointer"
+                >
+                  Shop now
+                </button>
+              </div>
+            </div>
+            <img
+              src="images/t-shirt2.png"
+              class="imgLeft w-96 h-96 , desktop:flex , mobile:hidden"
+            />
+          </div>
+        </div>
+        <div class="mySlides fade w-full h-[70vh]">
+          <div
+            class="slide h-full , desktop:flex justify-between items-center , mobile:flex"
+          >
+            <img
+              src="images/t-shirt7.png"
+              class="h-96 desktop:w-96 , mobile:w-52"
+            />
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h2
+                class="slideTitle font-bold tablet:text-3xl , mobile:text-1xl"
+              >
+                The hidden gems <br />
+                in fashion trends
+              </h2>
+              <p class="">
+                Step into the realm of unparalleled style with our
+                unbeatablet-shirt trendsetter of today.
+              </p>
+              <div className="flex gap-32">
+                <button
+                  class="bg-mainBlack text-mainWhite p-2 rounded w-32 mr-4 cursor-pointer"
+                >
+                  Shop now
+                </button>
+              </div>
+            </div>
+            <img
+              src="images/t-shirt7.png"
+              class="imgLeft w-96 h-96 , desktop:flex , mobile:hidden"
+            />
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a
+          class="prev absolute cursor-pointer top-[50%] font-bold text-[35px] font-bold hover:bg-mainBlack"
+          onclick="plusSlides(-1)"
+          >&#10094;</a
+        >
+        <a
+          class="next absolute cursor-pointer top-[50%] right-0 font-bold text-[35px] font-bold hover:bg-mainBlack"
+          onclick="plusSlides(1)"
+          >&#10095;</a
+        >
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <!-- features container -->
+      <section
+        class="features py-4 w-[95%] m-auto desktop:flex justify-evenly items-center bg-homeBg p-2"
+      >
+        <div class="flex flex-col items-center gap-1 desktop:gap-4 mobile:mb-4">
+          <i class="fa-solid fa-truck-fast font-bold text-3xl text-mainRed"></i>
+          <p class="">Free Shipping</p>
+        </div>
+        <div class="flex flex-col items-center gap-1 desktop:gap-4 mobile:mb-4">
+          <i class="fa-solid fa-shield font-bold text-3xl"></i>
+
+          <p>Secure Checkout</p>
+        </div>
+        <div class="flex flex-col items-center gap-1 desktop:gap-4 mobile:mb-4">
+          <i class="fa-solid fa-mobile font-bold text-3xl text-mainRed"></i>
+          <p>Online checkout</p>
+        </div>
+        <div class="flex flex-col items-center gap-1 desktop:gap-4 mobile:mb-4">
+          <i class="fa-solid fa-square-check font-bold text-3xl"></i>
+          <p>Great quality</p>
+        </div>
+      </section>
+
+      <!-- product container -->
+      <section class="product w-[95%] m-auto flex flex-col items-center gap-2">
+        <h2 class="mt-3 font-bold desktop:text-[30px] , mobile:text-[20px]">
+          Our Products
+        </h2>
+        <div class="filter mb-4">
+          <button class="bg-headerBg text-mainWhite p-2 ml-2 rounded">
+            All
+          </button>
+          <button class="bg-headerBg text-mainWhite p-2 ml-2 rounded">
+            Men
+          </button>
+          <button class="bg-headerBg text-mainWhite p-2 ml-2 rounded">
+            Women
+          </button>
+          <button class="bg-headerBg text-mainWhite p-2 w-24 ml-2 rounded">
+            Kids
+          </button>
+        </div>
+        <div class="products w-[90%] m-auto flex flex-wrap">
+          <!--- product code gose here-->
+        </div>
+      </section>
+      <!--- footer-->
+      <footer
+        class="bg-headerBg text-mainWhite mt-6 w-full , mobile:flex justify-center flex-col items-center"
+      >
+        <!--- footer top-->
+        <div
+          class="top desktop:flex justify-between p-3 gap-12, mobile:items-center w-[90%] m-auto"
+        >
+          <div class="left desktop:mr-3 mobile:mb-4">
+            <h3 class="tablet:text-xl mb-4,">About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
+              enim, modi nobis harum obcaecati optio perspiciatis est, <br />
+              consectetur, incidunt magni molestiae tempore nisi numquam labore
+            </p>
+            <div class="tablet:flex gap-12 mt-3 text-3xl, mobile: text-2xl">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-square-instagram text-mainRed"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube text-mainRed"></i>
+            </div>
+          </div>
+          <div class="middle desktop:mr-3 mobile:mb-4">
+            <h3 class="tablet:font-bold text-xl mb-4, mobile:text-[18px]">
+              News letter
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Ipsum debitis, minus ad obcaecati similique itaque corporis sed
+            </p>
+            <form action="#" class="mt-3">
+              <input
+                type="text"
+                placeholder="Enter your E-mail and get 10$ catch"
+                class="tablet:p-1 rounded w-72, mobile:p-1"
+              />
+              <button
+                class="tablet:bg-mainRed py-1 px-4 rounded cursor-pointer, mobile:bg-mainRed px-1"
+              >
+                Subscribes
+              </button>
+            </form>
+            <div
+              class="vias tablet:flex mt-3 gap-12 text-3xl, mobile:text-2xl gap-2"
+            >
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i
+                class="fa-brands fa-cc-visa tablet:text-mainRed , mobile:text-mainRed mx-4"
+              ></i>
+              <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+          </div>
+          <div class="right">
+            <h3 class="tablet:font-bold text-xl mb-4, mobile: text-[18px]">
+              Informations
+            </h3>
+            <p>delivery Informations</p>
+            <h3 class="tablet:font-bold text-l mb-3">Contact us</h3>
+            <p>phone: <span class="text-mainRed">07 82 37 11 77</span></p>
+            <p>
+              E-mail: <span class="text-mainRed">aocholayoul9@gmail.com</span>
+            </p>
+          </div>
+        </div>
+        <!--- footer bottom-->
+        <div class="tablet:flex justify-evenly bg-mainBlack p-3 mt-5 w-full">
+          <p class="mobile:mb-2 text-center">@2024copy Right</p>
+          <p class="mobile:mb-2 text-center">General condition of sale</p>
+          <p class="mobile:mb-2 text-center">Privacy Policy</p>
+          <p class="mobile:mb-2 text-center">Terms and Conditions</p>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
