@@ -35,6 +35,15 @@ tailwind.config = {
 };
 
 /**** home Page code  start** */
+
+//display navbar model
+const navLinks = document.querySelector(".nav-links");
+const model = document.querySelector(".model");
+const btnmodel = document.querySelector(".btnmodel");
+btnmodel.addEventListener("click", () => {
+  navLinks.classList.toggle("hidden");
+});
+
 /***  slider coded*/
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -48,15 +57,6 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
-
-//display model
-
-  const model = document.querySelector(".model");
-  const btnmodel =document.querySelector(".btnmodel")
-  btnmodel.addEventListener('click',()=>{
-     model.classList.toggle('model')
-  })
- 
 
 function showSlides(n) {
   let i;
@@ -142,7 +142,7 @@ const homeProductData = [
     price: 23,
   },
 ];
-
+/*** displaying products items */
 homeProductData.map(({ id, name, price, image }) => {
   const products = document.querySelector(".products");
   const ProductTamplate = `
@@ -150,8 +150,32 @@ homeProductData.map(({ id, name, price, image }) => {
                 <img src=${image} alt="" class="desktop:w-52 h-52 , mobile:w-32"/>
                 <h4>${name}</h4>
                 <p>$ ${price}</p>
-                <button class="bg-headerBg p-2 text-mainWhite rounded">Add to cart</button>
+                <button class="cartBtn bg-headerBg p-2 text-mainWhite rounded">Add to cart</button>
               </div>
 `;
   products.innerHTML += ProductTamplate;
+});
+
+let cartcount = 0;
+
+const cartBtn = document.querySelectorAll(".cartBtn");
+cartBtn.forEach((cartt) => {
+  cartt.addEventListener("click", (e) => {
+    const targetEl = e.target;
+    const cart = document.querySelector(".cart-items");
+    if (targetEl.classList.contains("added")) {
+      targetEl.classList.remove("added");
+      targetEl.style.background = "#023047";
+      targetEl.classList.add("remove");
+      targetEl.innerHTML = "Add to cart";
+      cartcount--;
+    } else {
+      targetEl.classList.add("added");
+      targetEl.classList.remove("remove");
+      targetEl.style.background = "red";
+      targetEl.innerText = "Remove from cart";
+      cartcount++;
+    }
+    cart.innerHTML = cartcount.toString();
+  });
 });

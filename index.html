@@ -21,45 +21,14 @@
       <nav
         class="bg-headerBg fixed z-50 flex justify-between items-center pr-10 pl-10 w-full h-14"
       >
-        <div class="">
-          <h2 class="text-[25px] font-bold">SleekStyle</h2>
-        </div>
-        <div class="hidden w-full tablet:block tablet:w-auto" id="navbar-default">
-        <ul class="desktop:flex gap-12 mobile:hidden">
-          <li><a href="./index.html"> Home</a></li>
-          <li><a href="./shop.html"> Shop</a></li>
-          <li><a href="./blog.html"> Blog</a></li>
-          <li><a href="./about.html"> About</a></li>
-          <li><a href="./contact.html"> Contact</a></li>
-        </ul>
-      </div>
-        <div
-          class="model desktop:hidden tablet:hidden mobile:hidden gap-12 flex bg-headerBg absolute top-[42px] w-[50%] h-[50vh] right-0 mt-3 p-2"
-        >
-          <ul class="flex flex-col items-center gap-8 text-[16px]">
-            <li><a href="./index.html"> Home</a></li>
-            <li><a href="./shop.html"> Shop</a></li>
-            <li><a href="./blog.html"> Blog</a></li>
-            <li><a href="./about.html"> About</a></li>
-            <li><a href="./contact.html"> Contact</a></li>
-          </ul>
-        </div>
-        <div class="desktop:flex gap-12 mobile:hidden">
-          <div class="bg-mainWhite rounded p-1">
-            <i class="fa fa-search text-mainBlack" aria-hidden="true"></i>
-            <input type="text" placeholder="search....." />
-          </div>
-          <div class="user"><i class="fa fa-user" aria-hidden="true"></i></div>
-          <div class="cart">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </div>
-        </div>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
           class="btnmodel desktop:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
+          name="menu"
+          onclick="Menu(this)"
         >
           <span class="sr-only">Open main menu</span>
           <svg
@@ -78,9 +47,52 @@
             />
           </svg>
         </button>
+        <div class="">
+          <h2 class="text-[25px] font-bold mobile:text-[20px]">SleekStyle</h2>
+        </div>
+        <div
+          class="hidden w-full tablet:block tablet:w-auto"
+          id="navbar-default"
+        >
+          <ul class="desktop:flex gap-12 mobile:hidden">
+            <li><a href="./index.html"> Home</a></li>
+            <li><a href="./shop.html"> Shop</a></li>
+            <li><a href="./blog.html"> Blog</a></li>
+            <li><a href="./about.html"> About</a></li>
+            <li><a href="./contact.html"> Contact</a></li>
+          </ul>
+        </div>
+        <!--mobile menu-->
+        <div
+          class="nav-links hidden duration-500 desktop:hidden gap-12 flex bg-headerBg absolute top-[42px] w-[50%] h-[50vh] left-0 mt-3 p-2"
+        >
+          <ul class="flex flex-col items-center gap-8 text-[16px]">
+            <li><a href="./index.html"> Home</a></li>
+            <li><a href="./shop.html"> Shop</a></li>
+            <li><a href="./blog.html"> Blog</a></li>
+            <li><a href="./about.html"> About</a></li>
+            <li><a href="./contact.html"> Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center desktop:flex gap-12">
+          <div
+            class="bg-mainWhite rounded p-1 desktop:block tablet:block mobile:hidden"
+          >
+            <i class="fa fa-search text-mainBlack" aria-hidden="true"></i>
+            <input type="text" placeholder="search....." />
+          </div>
+          <div class="user"><i class="fa fa-user" aria-hidden="true"></i></div>
+          <div class="cart relative">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <p
+              class="cart-items text-mainRed absolute font-bold top-[-10px] bg-mainWhite w-6 text-center rounded-full left-5"
+            >
+              1
+            </p>
+          </div>
+        </div>
       </nav>
-    </header> 
-
+    </header>
     <main>
       <!-- Slideshow container -->
       <div class="bg-homeBg p-2 relative w-[95%] m-auto mt-3 mb-4">
@@ -106,7 +118,7 @@
               </p>
               <div className="flex gap-32">
                 <button
-                  class="bg-mainBlack text-mainWhite p-2 rounded w-32 mr-4 cursor-pointer"
+                  class="bg-mainBlack text-mainWhite p-2 rounded mr-4 cursor-pointer"
                 >
                   Shop now
                 </button>
@@ -139,7 +151,7 @@
               </p>
               <div className="flex gap-32">
                 <button
-                  class="bg-mainBlack text-mainWhite p-2 rounded w-32 mr-4 cursor-pointer"
+                  class="bg-mainBlack text-mainWhite p-2 rounded mr-4 cursor-pointer"
                 >
                   Shop now
                 </button>
@@ -172,7 +184,7 @@
               </p>
               <div className="flex gap-32">
                 <button
-                  class="bg-mainBlack text-mainWhite p-2 rounded w-32 mr-4 cursor-pointer"
+                  class="bg-mainBlack text-mainWhite p-2 rounded mr-4 cursor-pointer"
                 >
                   Shop now
                 </button>
@@ -198,15 +210,24 @@
         >
         <!-- The dots/circles -->
         <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+          <span
+            class="dot cursor-pointer h-[15px] w-[15px] my-0 mx-[2px] bg-gray-400 rounded-full inline-block 0.6s ease"
+            onclick="currentSlide(1)"
+          ></span>
+          <span
+            class="dot cursor-pointer h-[15px] w-[15px] my-0 mx-[2px] bg-gray-400 rounded-full inline-block"
+            onclick="currentSlide(2)"
+          ></span>
+          <span
+            class="dot cursor-pointer h-[15px] w-[15px] my-0 mx-[2px] bg-gray-400 rounded-full inline-block"
+            onclick="currentSlide(3)"
+          ></span>
         </div>
       </div>
 
       <!-- features container -->
       <section
-        class="features py-4 w-[95%] m-auto desktop:flex justify-evenly items-center bg-homeBg p-2"
+        class="features py-4 w-[95%] m-auto desktop:flex justify-evenly items-center bg-homeBg p-2 mt-6"
       >
         <div class="flex flex-col items-center gap-1 desktop:gap-4 mobile:mb-4">
           <i class="fa-solid fa-truck-fast font-bold text-3xl text-mainRed"></i>

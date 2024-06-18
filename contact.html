@@ -1,12 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>SleekStyle</title>
-</head>
-<body>
-    <h2>contactt</h2>
-</body>
+  </head>
+  <body class="">
+    <header
+      class="bg-headerBg relative text-mainWhite h-14 flex justify-center"
+    >
+      <nav
+        class="bg-headerBg fixed z-50 flex justify-between items-center pr-10 pl-10 w-full h-14"
+      >
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="btnmodel desktop:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+          name="menu"
+          onclick="Menu(this)"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="">
+          <h2 class="text-[25px] font-bold mobile:text-[20px]">SleekStyle</h2>
+        </div>
+        <div
+          class="hidden w-full tablet:block tablet:w-auto"
+          id="navbar-default"
+        >
+          <ul class="desktop:flex gap-12 mobile:hidden">
+            <li><a href="./index.html"> Home</a></li>
+            <li><a href="./shop.html"> Shop</a></li>
+            <li><a href="./blog.html"> Blog</a></li>
+            <li><a href="./about.html"> About</a></li>
+            <li><a href="./contact.html"> Contact</a></li>
+          </ul>
+        </div>
+        <!--mobile menu-->
+        <div
+          class="nav-links hidden duration-500 desktop:hidden gap-12 flex bg-headerBg absolute top-[42px] w-[50%] h-[50vh] left-0 mt-3 p-2"
+        >
+          <ul class="flex flex-col items-center gap-8 text-[16px]">
+            <li><a href="./index.html"> Home</a></li>
+            <li><a href="./shop.html"> Shop</a></li>
+            <li><a href="./blog.html"> Blog</a></li>
+            <li><a href="./about.html"> About</a></li>
+            <li><a href="./contact.html"> Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center desktop:flex gap-12">
+          <div
+            class="bg-mainWhite rounded p-1 desktop:block tablet:block mobile:hidden"
+          >
+            <i class="fa fa-search text-mainBlack" aria-hidden="true"></i>
+            <input type="text" placeholder="search....." />
+          </div>
+          <div class="user"><i class="fa fa-user" aria-hidden="true"></i></div>
+          <div class="cart relative">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <p
+              class="cart-items text-mainRed absolute font-bold top-[-10px] bg-mainWhite w-6 text-center rounded-full left-5"
+            >
+              1
+            </p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--contact home image container-->
+      <div class="blog-img relative mb-12">
+        <img src="/images/blog-post-2.jpg" alt="" class="w-full h-[70vh]" />
+        <h2 class="text-[30px] font-bold absolute top-[40%] left-[50%]">
+          Contact us
+        </h2>
+      </div>
+      <!--contact content-->
+      <div class="bottom w-[95%] m-auto desktop:flex justify-evenly">
+        <div class="left flex flex-col gap-4 items-center mb-4">
+          <h3 class="font-bold text-xl">Get in touch</h3>
+          <p>
+            We are also active in social media. <br />You can find us on below
+            adresses..
+          </p>
+          <div class="items text-center">
+            <i class="fa-solid fa-location-dot text-xl text-mainRed"></i>
+
+            <p>
+              HS B26, Horton Ford Rd, <br />
+              Eidson, TN, 37731
+            </p>
+          </div>
+          <div class="items text-center">
+            <i class="fa-solid fa-phone text-xl text-mainRed"></i>
+            <p>Call us</p>
+            <p>+33 7 82 37 11 77</p>
+          </div>
+          <div class="items text-center">
+            <i class="fa-solid fa-envelope text-xl text-mainRed"></i>
+            <p>E-mailus</p>
+            <p>aocholayoul9@gmail.com</p>
+          </div>
+          <div class="text-center">
+            <i class="fa-solid fa-clock text-xl text-mainRed"></i>
+            <p>
+              Opening Hour 8:00 AM – 10:00 PM <br />
+              Monday – Sunday
+            </p>
+          </div>
+        </div>
+        <div class="right flex flex-col gap-4 items-center">
+          <h3 class="font-bold text-xl">Send a Message</h3>
+          <p>
+            Do you have anything in your mind to tell us?<br />
+            Please don’t hesitate to get in touch to us via our contact form.
+          </p>
+          <form action="#">
+            <div>
+              <div for="Name">Name</div>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                class="bg-homeBg p-1 rounded desktop:w-96 my-2"
+              />
+            </div>
+            <div>
+              <div for="Name">E-mail</div>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                class="bg-homeBg p-1 rounded desktop:w-96 my-2"
+              />
+            </div>
+            <div>
+              <div for="Name">Message</div>
+              <textarea
+                name=""
+                id=""
+                placeholder="Entyer your message"
+                class="bg-homeBg p-1 rounded desktop:w-96 my-2"
+              ></textarea>
+            </div>
+            <button class="bg-headerBg p-2 text-mainWhite rounded">
+              send message
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- google map-->
+      <div class="map w-[95%] m-auto mt-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus"
+          width="400"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full m-auto"
+        ></iframe>
+      </div>
+      <!--- footer-->
+      <footer
+        class="bg-headerBg text-mainWhite mt-6 w-full , mobile:flex justify-center flex-col items-center"
+      >
+        <!--- footer top-->
+        <div
+          class="top desktop:flex justify-between p-3 gap-12, mobile:items-center w-[90%] m-auto"
+        >
+          <div class="left desktop:mr-3 mobile:mb-4">
+            <h3 class="tablet:text-xl mb-4,">About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
+              enim, modi nobis harum obcaecati optio perspiciatis est, <br />
+              consectetur, incidunt magni molestiae tempore nisi numquam labore
+            </p>
+            <div class="tablet:flex gap-12 mt-3 text-3xl, mobile: text-2xl">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-square-instagram text-mainRed"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube text-mainRed"></i>
+            </div>
+          </div>
+          <div class="middle desktop:mr-3 mobile:mb-4">
+            <h3 class="tablet:font-bold text-xl mb-4, mobile:text-[18px]">
+              News letter
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Ipsum debitis, minus ad obcaecati similique itaque corporis sed
+            </p>
+            <form action="#" class="mt-3">
+              <input
+                type="text"
+                placeholder="Enter your E-mail and get 10$ catch"
+                class="tablet:p-1 rounded w-72, mobile:p-1"
+              />
+              <button
+                class="tablet:bg-mainRed py-1 px-4 rounded cursor-pointer, mobile:bg-mainRed px-1"
+              >
+                Subscribes
+              </button>
+            </form>
+            <div
+              class="vias tablet:flex mt-3 gap-12 text-3xl, mobile:text-2xl gap-2"
+            >
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i
+                class="fa-brands fa-cc-visa tablet:text-mainRed , mobile:text-mainRed mx-4"
+              ></i>
+              <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+          </div>
+          <div class="right">
+            <h3 class="tablet:font-bold text-xl mb-4, mobile: text-[18px]">
+              Informations
+            </h3>
+            <p>delivery Informations</p>
+            <h3 class="tablet:font-bold text-l mb-3">Contact us</h3>
+            <p>phone: <span class="text-mainRed">07 82 37 11 77</span></p>
+            <p>
+              E-mail: <span class="text-mainRed">aocholayoul9@gmail.com</span>
+            </p>
+          </div>
+        </div>
+        <!--- footer bottom-->
+        <div class="tablet:flex justify-evenly bg-mainBlack p-3 mt-5 w-full">
+          <p class="mobile:mb-2 text-center">@2024copy Right</p>
+          <p class="mobile:mb-2 text-center">General condition of sale</p>
+          <p class="mobile:mb-2 text-center">Privacy Policy</p>
+          <p class="mobile:mb-2 text-center">Terms and Conditions</p>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
