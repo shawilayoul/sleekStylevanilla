@@ -16,8 +16,6 @@ tailwind.config = {
       xl: "1.25rem",
       "2xl": "1.563rem",
       "3xl": "1.953rem",
-      "4xl": "2.441rem",
-      "5xl": "3.052rem",
     },
     extend: {
       colors: {
@@ -144,7 +142,9 @@ const homeProductData = [
 ];
 /*** displaying products items */
 homeProductData.map(({ id, name, price, image }) => {
+
   const products = document.querySelector(".products");
+
   const ProductTamplate = `
   <div class=" flex flex-col gap-2  items-center bg-homeBg m-2 p-2 rounded" key={id}>
                 <img src=${image} alt="" class="desktop:w-52 h-52 , mobile:w-32"/>
@@ -156,6 +156,8 @@ homeProductData.map(({ id, name, price, image }) => {
   products.innerHTML += ProductTamplate;
 });
 
+
+/*** updating the add button and cart***/
 let cartcount = 0;
 
 const cartBtn = document.querySelectorAll(".cartBtn");
